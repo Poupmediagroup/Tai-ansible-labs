@@ -5,8 +5,15 @@
     https_port: 4443
     html_welcome_msg: "Hello world!"
   tasks:
+
   - name: ensure apache is at the latest version
     apt:
       name: apache2
       state: latest
+
+  - name: write apache2 ports.conf config file
+    template:
+      src: templates/ports.conf.j2
+      dest: /etc/apache/ports.conf
+      
   
