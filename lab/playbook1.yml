@@ -5,7 +5,7 @@
     https_port: 4443
     html_welcome_msg: "Hello"
   tasks:
-    - name: ensure apache is at latest version
+    name: ensure apache is at latest version
     apt:
       name: apache2
       state: latest
